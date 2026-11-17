@@ -9,6 +9,28 @@ felt or caught in a vortex. You can also open real `.ply` / `.splat` scans.
 Inspired by the Gaussian-splat reels by [vanity ibex](https://www.instagram.com/reel/DdeFgPlCKy4/). Splat Garden is
 an independent project and shares no code with them.
 
+![Splat Garden](docs/screenshot.jpg)
+
+<!-- videos:start -->
+## See it in action
+
+<p align="center"><a href="docs/videos/tutorial.mp4"><img src="docs/videos/tutorial.jpg" alt="How it works" width="640"></a><br><b>▶ <a href="docs/videos/tutorial.mp4">How it works</a></b> (0:55, with captions)</p>
+
+**Made with Splat Garden, from the public-domain plant photos and clip it ships with**
+
+<table><tr>
+<td width="33%" align="center"><a href="docs/videos/examples/geranium-drip-pot.mp4"><img src="docs/videos/examples/geranium-drip-pot.gif" alt="Drip Pot (photo, 1:1)"></a><br><a href="docs/videos/examples/geranium-drip-pot.mp4">Drip Pot (photo, 1:1)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/nasturtium-ember.mp4"><img src="docs/videos/examples/nasturtium-ember.gif" alt="Ember (photo, 9:16)"></a><br><a href="docs/videos/examples/nasturtium-ember.mp4">Ember (photo, 9:16)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/nasturtium-bubble.mp4"><img src="docs/videos/examples/nasturtium-bubble.gif" alt="Bubble (photo, 1:1)"></a><br><a href="docs/videos/examples/nasturtium-bubble.mp4">Bubble (photo, 1:1)</a></td>
+</tr><tr>
+<td width="33%" align="center"><a href="docs/videos/examples/geranium-felt.mp4"><img src="docs/videos/examples/geranium-felt.gif" alt="Felt (photo, 4:5)"></a><br><a href="docs/videos/examples/geranium-felt.mp4">Felt (photo, 4:5)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/bee-balm-swirl.mp4"><img src="docs/videos/examples/bee-balm-swirl.gif" alt="Swirl (video, 16:9)"></a><br><a href="docs/videos/examples/bee-balm-swirl.mp4">Swirl (video, 16:9)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/bee-balm-drip-pot.mp4"><img src="docs/videos/examples/bee-balm-drip-pot.gif" alt="Drip Pot (video, 1:1)"></a><br><a href="docs/videos/examples/bee-balm-drip-pot.mp4">Drip Pot (video, 1:1)</a></td>
+</tr></table>
+
+Click any picture to play the video. Example sources, all public domain, from Wikimedia Commons: [Pot with geranium.jpg](https://commons.wikimedia.org/wiki/File:Pot_with_geranium.jpg) by Kattusa24; [Tropaeolum majus 2005 G1.jpg](https://commons.wikimedia.org/wiki/File:Tropaeolum_majus_2005_G1.jpg) by George Chernilevsky; [Flowers (20210630-FPAC-KLS-0001).webm](https://commons.wikimedia.org/wiki/File:Flowers_(20210630-FPAC-KLS-0001).webm), USDA footage by Kirsten Strough.
+<!-- videos:end -->
+
 ## Install
 
 You need:
@@ -133,6 +155,12 @@ listed in [tests/sources/CREDITS.md](tests/sources/CREDITS.md)).
 - Sample photo: [Pot with geranium.jpg](https://commons.wikimedia.org/wiki/File:Pot_with_geranium.jpg) by Kattusa24,
   Wikimedia Commons (public domain).
 - Test sources: public domain and CC0, listed in [tests/sources/CREDITS.md](tests/sources/CREDITS.md).
+- Footage in the tutorial and examples: the sample photo and two of the test sources, all public domain, from
+  Wikimedia Commons: [Pot with geranium.jpg](https://commons.wikimedia.org/wiki/File:Pot_with_geranium.jpg) by
+  Kattusa24, [Tropaeolum majus 2005 G1.jpg](https://commons.wikimedia.org/wiki/File:Tropaeolum_majus_2005_G1.jpg) by
+  George Chernilevsky, and
+  [Flowers (20210630-FPAC-KLS-0001).webm](https://commons.wikimedia.org/wiki/File:Flowers_(20210630-FPAC-KLS-0001).webm),
+  USDA footage by Kirsten Strough.
 - [Depth Anything](https://huggingface.co/LiheYoung/depth-anything-large-hf) (Apache-2.0) through
   [transformers](https://github.com/huggingface/transformers), and [rembg](https://github.com/danielgatis/rembg) (MIT)
   with the ISNet model, for depth and cut-outs.
