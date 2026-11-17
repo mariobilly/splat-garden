@@ -1,0 +1,13 @@
+# Install PyTorch first (with CUDA if you have an NVIDIA GPU): https://pytorch.org/get-started/locally/
+torch
+fastapi
+uvicorn
+python-multipart
+numpy
+pillow
+opencv-python
+# Depth Anything is loaded through transformers (4.56 or newer)
+transformers>=4.56
+rembg
+# For the GPU cut-out, install onnxruntime-gpu instead of onnxruntime
+onnxruntime

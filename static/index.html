@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Splat Garden</title>
+<link rel="icon" href="/static/icon.png">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand"><span class="dot"></span>Splat Garden</div>
+  <div class="actions">
+    <button id="btnOpen" class="primary" title="Open a photo or a video (O)">Open photo / video</button>
+    <button id="btnScan" title="Open a real Gaussian-splat scan (.ply or .splat)">Open scan</button>
+    <div class="menu">
+      <button id="btnRecent" title="Sources you opened before">Recent ▾</button>
+      <div id="recentList" class="dropdown" hidden></div>
+    </div>
+    <span class="sep"></span>
+    <button id="btnPng" title="Save this frame as a PNG">Save PNG</button>
+    <button id="btnPly" title="Save the 3D splats as a .ply (opens in SuperSplat, Postshot...)">Save .ply</button>
+    <select id="exportFormat" title="Export format. ProRes 4444 keeps the background transparent (alpha) for After Effects, Premiere, DaVinci...">
+      <option value="mp4">MP4 · H.264</option>
+      <option value="prores">ProRes 4444 · transparent</option>
+    </select>
+    <button id="btnExport" class="accent" title="Render the clip (E)">Export MP4</button>
+    <button id="btnFolder" title="Open the output folder">Folder</button>
+  </div>
+  <input id="fileMedia" type="file" accept="image/*,video/*,.mkv,.webm,.mov" hidden>
+  <input id="fileScan" type="file" accept=".ply,.splat" hidden>
+</header>
+
+<main>
+  <section id="stage">
+    <div id="viewWrap">
+      <canvas id="view"></canvas>
+      <div id="empty">
+        <div class="emptyBox">
+          <h1>Drop a photo or a video</h1>
+          <p>A plant, a flower pot, a corner of the garden... Splat Garden turns it into a 3D Gaussian-splat scan
+             and flies a camera around it.</p>
+          <div class="row">
+            <button id="btnOpen2" class="primary">Open photo / video</button>
+            <button id="btnSample">Try the sample</button>
+          </div>
+          <p class="small">Real scans work too: drop a <b>.ply</b> or <b>.splat</b> from Polycam, Luma, Scaniverse or Postshot.</p>
+        </div>
+      </div>
+      <div id="busy" hidden>
+        <div class="busyBox">
+          <div id="busyTitle">Working</div>
+          <div class="bar"><i id="busyBar"></i></div>
+          <div id="busyMsg" class="small"></div>
+          <button id="busyCancel" hidden>Cancel</button>
+        </div>
+      </div>
+      <div id="dropHint" hidden><div>Drop to open</div></div>
+    </div>
+    <div id="transport">
+      <button id="btnPlay" class="icon" title="Play / pause (Space)">❚❚</button>
+      <input id="scrub" type="range" min="0" max="1000" value="0">
+      <span id="clock">0.0 / 12.5 s</span>
+      <select id="aspect" title="Output shape">
+        <option value="1:1">1:1 · 1080²</option>
+        <option value="4:5">4:5 · 1080×1350</option>
+        <option value="9:16">9:16 · 1080×1920</option>
+        <option value="16:9">16:9 · 1920×1080</option>
+      </select>
+      <button id="btnResetView" class="icon" title="Reset the view you dragged (R)">⟲</button>
+    </div>
+    <div id="info"></div>
+  </section>
+
+  <aside id="panel">
+    <div class="sectionTitle">Looks <span class="hint">1–5</span></div>
+    <div id="looks"></div>
+    <div id="controls"></div>
+  </aside>
+</main>
+
+<div id="toast" hidden></div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>
